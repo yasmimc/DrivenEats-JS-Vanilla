@@ -2,10 +2,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    
+    background-color: #E5E5E5;;
 }
 
 h1 {
     font-family: 'Righteous', cursive;
+    font-size: 26px;   
+    margin-top: 27px;
 }
 
 .top-bar {
@@ -19,10 +23,12 @@ h1 {
     justify-content: center;
     flex-direction: column;
     color: aliceblue;
+    padding-left: 21px;
 }
 
 .top-bar h1 {
     font-size: 44px;
+    padding: 0;
 }
 
 .top-bar h2 {
@@ -30,23 +36,24 @@ h1 {
 }
 
 .content {
-    background-color: purple;
-    margin-top: 92px;
+    margin-top: calc(92px + 27px);
+    margin-bottom: 92px;
+    padding-left: 19px;
     width: 100%;
 }
 
 .main-course {
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 100%;
 }
 
 .drink {
-    background-color: green;
+    /* background-color: green; */
     width: 100%;
 }
 
 .dessert {
-    background-color: pink;
+    /* background-color: pink; */
     width: 100%;
 }
 
@@ -56,12 +63,12 @@ h1 {
     width: 100%;
     overflow: scroll;
     
-    
+    margin-top: 17px;
 }
 
 .option {
     background-color: orange;
-    margin-left: 16px;
+    margin-right: 16px;
     width: 172px;
     height: 216px;
     flex-shrink: 0;
