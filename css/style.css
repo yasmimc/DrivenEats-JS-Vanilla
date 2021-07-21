@@ -1,0 +1,65 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+.top-bar {
+    background-color:#CF2B2B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 92px;
+    width: 100%;
+}
+
+.content {
+    background-color: purple;
+    margin-top: 92px;
+    width: 100%;
+}
+
+.main-course {
+    background-color: yellow;
+    width: 100%;
+}
+
+.drink {
+    background-color: green;
+    width: 100%;
+}
+
+.dessert {
+    background-color: pink;
+    width: 100%;
+}
+
+.options {
+    background-color: aquamarine;
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    
+    
+}
+
+.option {
+    background-color: orange;
+    margin-left: 16px;
+    width: 172px;
+    height: 216px;
+    flex-shrink: 0;
+}
+
+.bottom-bar {
+    background-color: lightblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 92px;
+    width: 100%;
+}
