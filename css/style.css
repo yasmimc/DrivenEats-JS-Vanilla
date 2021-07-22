@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
+.section-title {
     font-family: 'Righteous', cursive;
     font-size: 26px;
 }
@@ -31,11 +31,12 @@ h1 {
 
 .top-bar h1 {
     font-size: 44px;
-    padding: 0;
+    padding: 0;    
+    font-family: 'Righteous', cursive;
 }
 
 .top-bar h2 {
-    font-size: 18px;
+    font-size: 18px;    
 }
 
 .content {
