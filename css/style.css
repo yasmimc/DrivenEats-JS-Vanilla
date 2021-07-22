@@ -76,6 +76,7 @@ div::-webkit-scrollbar {
 .option {
     background-color: #FFFFFF;
     margin-right: 16px;
+    margin-bottom: 16px;
     width: 172px;
     height: 216px;
     flex-shrink: 0;
