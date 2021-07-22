@@ -1,19 +1,21 @@
-
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    
-    background-color: #E5E5E5;;
+    background-color: #E5E5E5;
+    ;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 h1 {
     font-family: 'Righteous', cursive;
-    font-size: 26px;   
-    margin-top: 27px;
+    font-size: 26px;
 }
 
 .top-bar {
-    background-color:#CF2B2B;
+    background-color: #CF2B2B;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,6 +26,7 @@ h1 {
     flex-direction: column;
     color: aliceblue;
     padding-left: 21px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .top-bar h1 {
@@ -58,20 +61,51 @@ h1 {
 }
 
 .options {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
     width: 100%;
     overflow: scroll;
-    
     margin-top: 17px;
+    margin-bottom: 17px;
 }
 
+div::-webkit-scrollbar {
+    display: none;
+  }
+
 .option {
-    background-color: orange;
+    background-color: #FFFFFF;
     margin-right: 16px;
     width: 172px;
     height: 216px;
     flex-shrink: 0;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.product-name {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.product-description {
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+
+.product-price {    
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .bottom-bar {
