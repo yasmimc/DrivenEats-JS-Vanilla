@@ -2,7 +2,6 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     background-color: #E5E5E5;
-    ;
 }
 
 * {
@@ -87,6 +86,7 @@ div::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: none;
 }
 
 img {
