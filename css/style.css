@@ -44,19 +44,6 @@ body {
     margin-top: calc(92px + 27px);
     margin-bottom: 92px;
     padding-left: 19px;
-    width: 100%;
-}
-
-.main-course {
-    width: 100%;
-}
-
-.drink {
-    width: 100%;
-}
-
-.dessert {
-    width: 100%;
 }
 
 .options {
@@ -157,6 +144,6 @@ img {
     border: 0;
 }
 
-.abled {
+.enabled {
     background-color: #32B72F;
 }

@@ -29,7 +29,7 @@
     <!-- CONTENT -->
     <div class="content">
         <!-- Main Course -->
-        <div class="main-course section">
+        <div class="main-course">
             <h1 class="section-title">Primeiro seu prato</h1>
             <div class="options">
                 <button class="option tropeiro-veg" onclick="selectOption(this, 'main-course');">
@@ -63,7 +63,7 @@
             </div>
         </div>
         <!-- Drink -->
-        <div class="drink section">
+        <div class="drink">
             <h1 class="section-title">Agora, sua bebida</h1>
             <div class="options">
                 <button class="option guarana" onclick="selectOption(this, 'drink');">
@@ -97,7 +97,7 @@
             </div>
         </div>
         <!-- Dessert -->
-        <div class="dessert section">
+        <div class="dessert">
             <h1 class="section-title">Por fim, sua sobremesa</h1>
             <div class="options">
                 <button class="option petit-gateau" onclick="selectOption(this, 'dessert');">
@@ -133,7 +133,7 @@
     </div>
     <!-- BOTTOM-BAR -->
     <div class="bottom-bar">
-        <button class="order-buttom " onclick="canOrder();">Selecione os 3 itens para fechar o pedido</button>
+        <button class="order-buttom" onclick=executeOrder(this); >Selecione os 3 itens para fechar o pedido</button>
     </div>
 
     <!-- ICON IMPORT -->
