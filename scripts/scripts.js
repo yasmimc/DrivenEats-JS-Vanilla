@@ -1,13 +1,18 @@
 let whatsappMsg;
 let whatsappNumber = "553184146801";
-function executeOrder() {
-   
-    //exibir tela de confirmação
+function executeOrder() {    
+    let name = prompt("Agradecemos seu pedido! Qual o seu nome?");
+    let address = prompt("Agora, seu endereço:") 
+
+    if (name && address) {
+        whatsappMsg = whatsappMsg + "\n" + "\n" +
+        "Nome: " + name + "\n" +
+        "Endereço: " + address;
+    }
     confirmOrder();
 
     whatsappMsg = encodeURIComponent(whatsappMsg);
-    window.location.href = "https://wa.me/"+ whatsappNumber+"?text="+whatsappMsg;
-    
+    window.location.href = "https://wa.me/"+ whatsappNumber+"?text="+whatsappMsg;    
 }
 
 function confirmOrder() {
@@ -40,8 +45,7 @@ function confirmOrder() {
             "</div>" +
         "</div>"
         confimationScreen.classList.remove("disabled");    
-    }
-    
+    }    
 }
 
 function cancel () {
