@@ -4,10 +4,21 @@ function changeOrderButtom() {
     buttomText.classList.add("abled");
 }
 
-function selectOption(option) {
-    console.log(option);
-    const selectedOption = document.querySelector(option);
-    selectedOption.classList.toggle("selectedOption");
+function selectOption(option, sectionName) {
+
+    const section = document.querySelector("." + sectionName);
+    
+    const selectedOption = section.querySelector(".selectedOption");
+    
+    if (selectedOption) {
+        selectedOption.classList.remove("selectedOption");
+        option.classList.add("selectedOption");
+    }
+    else{
+        option.classList.add("selectedOption");
+    }    
+
+
 }
 
 

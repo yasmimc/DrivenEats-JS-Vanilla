@@ -48,22 +48,18 @@ body {
 }
 
 .main-course {
-    /* background-color: yellow; */
     width: 100%;
 }
 
 .drink {
-    /* background-color: green; */
     width: 100%;
 }
 
 .dessert {
-    /* background-color: pink; */
     width: 100%;
 }
 
 .options {
-    /* background-color: aquamarine; */
     display: flex;
     width: 100%;
     overflow: scroll;
@@ -104,8 +100,8 @@ div::-webkit-scrollbar {
     display: initial;
     position: absolute;
     color: #32B72F;
-    font-size: 15px;
-    bottom: 5px;
+    font-size: 20px;
+    bottom: 13px;
     right: 5px;
 }
 
