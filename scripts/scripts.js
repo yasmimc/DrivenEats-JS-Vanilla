@@ -1,16 +1,59 @@
 let whatsappMsg;
 let whatsappNumber = "553184146801";
 function executeOrder() {
+   
+    //exibir tela de confirmação
+    confirmOrder();
+
+    whatsappMsg = encodeURIComponent(whatsappMsg);
+    window.location.href = "https://wa.me/"+ whatsappNumber+"?text="+whatsappMsg;
+    
+}
+
+function confirmOrder() {
     const isEnabled = document.querySelector(".enabled");
 
     if (isEnabled) {
-        //exibir tela de confirmação
-        whatsappMsg = encodeURIComponent(whatsappMsg);
-        window.location.href = "https://wa.me/"+ whatsappNumber+"?text="+whatsappMsg;
+        let confimationScreen = document.querySelector(".confirmation-screen");
+        confimationScreen.innerHTML = 
+        "<div class='confirmation-box'>" +
+            "<h1>Confirme seu pedido</h1>" + 
+            "<div class='item'>" +
+            "    <p>" + productName[0] + "</p>" +
+            "    <p>" + productPrice[0] + "</p>" +
+            "</div>" +
+            "<div class='item'>" +
+            "    <p>" + productName[1] + "</p>" +
+            "    <p>" + productPrice[1] + "</p> " +
+            "</div>" +
+            "<div class='item'>" +
+            "    <p>" + productName[2] + "</p>" +
+            "    <p>" + productPrice[2] + "</p>" +
+            "</div>" +
+            "<div class='total'>" +
+            "    <p>TOTAL</p>" +
+            "    <p>R$ " + total + "</p>" +
+            "</div>" +
+            "<div class='buttons-container'>" +
+            "    <button class='order' onclick=executeOrder();>Tudo certo, pode pedir!</button>" +
+            "    <button class='cancel' onclick=cancel();>Cancelar</button>" +
+            "</div>" +
+        "</div>"
+        confimationScreen.classList.remove("disabled");    
     }
+    
 }
 
-function canOrder() {    
+function cancel () {
+    let confimationScreen = document.querySelector(".confirmation-screen");
+    confimationScreen.classList.add("disabled");
+}
+
+let productName = Array(3);
+let productPrice = Array(3);
+let total;
+
+function canOrder() {
     let sections;
 
     const mainCourse = document.querySelector(".main-course");
@@ -21,12 +64,10 @@ function canOrder() {
 
     let selectedOption = Array(3);
     let allSelected = true;
-    
-    let productName = Array(3);
-    let productPrice = Array(3);
-    let total = 0;
 
-    for (i = 0; i < 3; i++) {        
+    total = 0;
+
+    for (i = 0; i < 3; i++) {
         selectedOption[i] = sections[i].querySelector(".selectedOption");
         if (!selectedOption[i]) {
             allSelected = false;
@@ -35,10 +76,11 @@ function canOrder() {
             productName[i] = selectedOption[i].querySelector(".product-name").innerHTML;
             productPrice[i] = selectedOption[i].querySelector(".product-price").innerHTML;
 
-            // Converting "R$ XX,XX" string prices into XX.XX float values
-            productPrice[i] = parseFloat(productPrice[i].substring(3).replace(',', '.'))
+            // Converting "R$ XX,XX" string prices into XX.XX float values with two digits after decimal point
+            productPrice[i] = parseFloat(productPrice[i].substring(3).replace(',', '.')).toFixed(2);
 
-            total = total + productPrice[i];
+            total = total + (productPrice[i]);
+            total = parseFloat(total).toFixed(2);
         }
     }
 
