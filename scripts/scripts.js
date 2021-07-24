@@ -77,12 +77,13 @@ function canOrder() {
             productPrice[i] = selectedOption[i].querySelector(".product-price").innerHTML;
 
             // Converting "R$ XX,XX" string prices into XX.XX float values with two digits after decimal point
-            productPrice[i] = parseFloat(productPrice[i].substring(3).replace(',', '.')).toFixed(2);
+            productPrice[i] = Number(productPrice[i].substring(3).replace(',', '.')).toFixed(2);
 
-            total = total + (productPrice[i]);
-            total = parseFloat(total).toFixed(2);
+            total = (Number(total) + Number(productPrice[i])).toFixed(2);
         }
     }
+
+    console.log(productPrice);
 
     if (allSelected) {
         changeOrderButtom();
