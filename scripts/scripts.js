@@ -16,6 +16,9 @@ function executeOrder() {
 }
 
 function confirmOrder() {
+    const body = document.querySelector("body");
+    body.classList.add("lock");
+
     const isEnabled = document.querySelector(".enabled");
 
     if (isEnabled) {
@@ -51,6 +54,8 @@ function confirmOrder() {
 function cancel () {
     let confimationScreen = document.querySelector(".confirmation-screen");
     confimationScreen.classList.add("disabled");
+    const body = document.querySelector("body");
+    body.classList.remove("lock");
 }
 
 let productName = Array(3);

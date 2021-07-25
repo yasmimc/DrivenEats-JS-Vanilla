@@ -4,6 +4,10 @@ body {
     background-color: #E5E5E5;
 }
 
+.lock {
+    overflow: hidden;
+}
+
 * {
     box-sizing: border-box;
 }
