@@ -21,6 +21,11 @@ function confirmOrder() {
 
     const isEnabled = document.querySelector(".enabled");
 
+    // Converting XX.XX float values into "XX,XX" strings
+    for (i=0;i<3;i++) {
+        productPrice[i] = productPrice[i].replace('.', ',');
+    }
+
     if (isEnabled) {
         let confimationScreen = document.querySelector(".confirmation-screen");
         confimationScreen.innerHTML = 
@@ -40,7 +45,7 @@ function confirmOrder() {
             "</div>" +
             "<div class='total'>" +
             "    <p>TOTAL</p>" +
-            "    <p>R$ " + total + "</p>" +
+            "    <p>" + total + "</p>" +
             "</div>" +
             "<div class='buttons-container'>" +
             "    <button class='order' onclick=executeOrder();>Tudo certo, pode pedir!</button>" +
