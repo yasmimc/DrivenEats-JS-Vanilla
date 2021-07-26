@@ -53,6 +53,7 @@ ion-icon {
     overflow-y: scroll;  
     height: calc(100vh - (2*92px));
     margin-top: 92px;
+    margin-bottom: 92px;
     padding-top: 27px;
     padding-left: 19px;  
 }
