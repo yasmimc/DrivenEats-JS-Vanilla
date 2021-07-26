@@ -110,11 +110,8 @@ function selectOption(option, sectionName) {
 
     if (selectedOption) {
         selectedOption.classList.remove("selectedOption");
-        option.classList.add("selectedOption");
     }
-    else {
-        option.classList.add("selectedOption");
-    }
+    option.classList.add("selectedOption");
     canOrder();
 }
 

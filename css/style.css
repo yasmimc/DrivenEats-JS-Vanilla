@@ -45,9 +45,11 @@ body {
 }
 
 .content {
-    margin-top: calc(92px + 27px);
-    margin-bottom: 92px;
+    padding-top: 27px;
     padding-left: 19px;
+    height: calc(100vh - (2*92px));
+    overflow-y: scroll;
+    margin-top: 92px;
 }
 
 .options {
