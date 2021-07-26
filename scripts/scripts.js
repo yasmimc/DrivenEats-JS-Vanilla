@@ -58,8 +58,8 @@ function cancel () {
     body.classList.remove("lock");
 }
 
-let productName = Array(3);
-let productPrice = Array(3);
+const productName = Array(3);
+const productPrice = Array(3);
 let total;
 
 function canOrder() {
@@ -92,10 +92,10 @@ function canOrder() {
         }
     }
 
-    console.log(productPrice);
-
     if (allSelected) {
         changeOrderButtom();
+        // Converting XX.XX float value into "R$ XX,XX" string before send message
+        total = Number(total).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
         whatsappMsg = "Olá, gostaria de fazer o pedido:" + "\n" +
             "- Prato: " + productName[0] + "\n" +
             "- Bebida: " + productName[1] + "\n" +
