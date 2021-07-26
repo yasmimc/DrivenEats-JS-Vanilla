@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     background-color: #E5E5E5;
+    scrollbar-width: 0;
 }
 
 .lock {
@@ -59,6 +60,8 @@ body {
 
 div::-webkit-scrollbar {
     display: none;
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 .option {
